@@ -3,13 +3,22 @@
     "description": "Flota Partenera v2.0",
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/alexandru2321/flotapartenera"
+            "type":"package",
+            "package": {
+              "name": "alexandru2321/flotapartenera",
+              "version":"master",
+              "source": {
+                  "url": "https://github.com/alexandru2321/flotapartenera.git",
+                  "type": "git",
+                  "reference":"master"
+                }
+            }
         }
     ],
     "require": {
         "twig/twig": "~3.0",
         "phpmailer/phpmailer": "^6.5",
+        "alexandru2321/flotapartenera": "master",
     },
     "autoload": {
         "psr-4": {
