@@ -19,7 +19,7 @@
               "source": {
                   "url": "https://github.com/l3pp4rd/flotapartenera.git",
                   "type": "git",
-                  "reference":"master"
+                  "reference":"main"
                 }
             }
         }
