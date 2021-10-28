@@ -1,6 +1,12 @@
 {
     "name":"alexandru2321/flotapartenera",
     "description": "Flota Partenera v2.0",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/alexandru2321/flotapartenera"
+        }
+    ],
     "require": {
         "twig/twig": "~3.0",
         "phpmailer/phpmailer": "^6.5",
