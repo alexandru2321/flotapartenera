@@ -1,0 +1,23 @@
+{
+    "name":"alexandru2321/flotapartenera",
+    "description": "Flota Partenera v2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Webiz Solutions",
+            "website": "https://webizsolutions.ro",
+            "email": "office@webizsolutions.ro"
+        }
+    ],
+    "require": {
+        "twig/twig": "~3.0",
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\": "App/"
+        }
+    }
+}

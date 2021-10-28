@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang = "ro">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="description" content="{% block description %}{% endblock %}">
+	<meta name="keywords" content="{% block keywords %}{% endblock %}">
+	<meta name="author" content="Flota Partenera">
+	<meta name="robots" content = "{% block robots %}{% endblock %}">
+	<meta name="googlebot" content = "{% block googlebot %}{% endblock %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{public_url}}/css/fp-theme.css?v=1" rel="stylesheet">
+	<link href="{{public_url}}/icons/style.css?v=1" rel="stylesheet">
+	<link rel="stylesheet" href="{{public_url}}/vendor/int-tel-prefix/build/css/intlTelInput.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+	<nav class = "fp-navbar">
+		<div class = "fp-container fp-flex">
+			<a class = "logo" aria-label = "Home" href = "/flota-partenera">
+			<img alt = "flota, partenera, joburi, taz, foodpanda, bolt, food, glovo" src = "{{public_url}}/img/logo.png">
+			Flota Partenera
+			</a>
+			<ul class = "fp-navbar-list">
+				<li><a href = "/flota-partenera" class = "{% if active == 'home' %}active{% endif %}">Acasa</a></li>
+				<li><a href = "/flota-partenera/livrari-tazz" class = "tazz {% if active == 'tazz' %}active{% endif %}">Tazz</a></li>
+				<li><a href = "/flota-partenera/livrari-foodpanda" class = "foodpanda {% if active == 'foodpanda' %}active{% endif %}">Foodpanda</a></li>
+				<li><a href = "/flota-partenera/livrari-boltfood" class = "bolt {% if active == 'boltfood' %}active{% endif %}">Bolt Food</a></li>
+				<li><a href = "/flota-partenera/livrari-glovo" class = "glovo {% if active == 'glovo' %}active{% endif %}">Glovo</a></li>
+				<li>
+					<a class = "contact {% if active == 'contact' %}active{% endif %}" href = "/flota-partenera/contact">
+						<i class = "fp-icon-customer-service"></i>
+						<span>Contact</span>
+					</a>
+				</li>
+			</ul>
+			<button type = "button" class = "m-fp-menu-button">
+				<i class = "fp-icon-menu"></i>
+				<i class = "fp-icon-menu-close"></i>
+			</button>
+		</div>
+	</nav>
+	</header>
+    {% block body %}
+    {% endblock %}
+    <footer>
+    	<div class = "fp-container fp-flex top">
+    		<div class = "fp-about">
+    			<h2>Flota Partenera</h2>
+    			<p>Livrari Tazz, Foodpanda, Bolt Food si Glovo. Livreaza alaturi de noi, profita de bonusuri motivante, bucura-te de o viata usoara.</p>
+    		</div>
+    		<div class = "fp-special">
+    			<h2>Livreaza cu noi</h2>
+    			<ul>
+    				<li><a aria-label = "tazz" href = "/flota-partenera/livrari-tazz">Tazz by EMAG</a></li>
+    				<li><a aria-label = "foodpanda" href = "/flota-partenera/livrari-foodpanda">Foodpanda</a></li>
+    				<li><a aria-label = "bolt" href = "/flota-partenera/livrari-boltfood">Bolt Food</a></li>
+    				<li><a aria-label = "glovo" href = "/flota-partenera/livrari-glovo">Glovo</a></li>
+    			</ul>
+    		</div>
+    		<div class = "fp-info">
+    			<h2>Informatii</h2>
+    			<ul>
+    				<li><a aria-label = "politica" href = "#">Politica de confidentialitate</a></li>
+    				<li><a aria-label = "termeni" href = "#">Termeni si conditii</a></li>
+    				<li><a aria-label = "cookies" href = "#">Politica cookies</a></li>
+    			</ul>
+    		</div>
+    		<div class = "fp-info">
+    			<h2>Contact</h2>
+    			<ul>
+    				<li><a aria-label = "email" href = "mailto:contact@flotapartenera.com">contact@flotapartenera.ro</a></li>
+    				<li><a aria-label = "phone" href = "tel:0790454647">+40 790-454-647</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div class = "bottom">
+	    	<div class = "fp-container fp-flex">
+	    		<div class = "fp-credits">
+	    			<p>Dezvoltat cu ❤ de <a aria-label = "webizsolutions" href = "https://webizsolutions.ro">Webiz Solutions</a>.</p>
+	    		</div>
+	    		<div class = "fp-copyright">
+	    			<p>Flota Partenera &copy; 2018 - 2021.</p>
+	    		</div>
+	    	</div>
+    	</div>
+    </footer>
+	<script src="{{public_url}}/vendor/int-tel-prefix/build/js/intlTelInput.js"></script>
+	<script>
+		var input = document.querySelector("#phone");
+		var iti = window.intlTelInput(input, {
+		    customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+		        alert(selectedCountryPlaceholder);
+		    },
+		    separateDialCode: true,
+		    preferredCountries: ["ro", "us", "gb"],
+		    autoPlaceholder: true,
+		    utilsScript: "{{public_url}}/vendor/int-tel-prefix/build/js/utils.js",
+		});
+		$('.send-form').click(function() {
+		    const name = $("input[name=pname]").val();
+		    const phone = iti.getNumber();
+		    if (name.length < 3 || name.length > 64) {
+		        alert('Numele trebuie sa aibe intre 3 si 64 de caractere');
+		    } else {
+
+		        if (phone.length < 5 || phone.length > 64) {
+		            alert("Numarul de telefon trebuie sa aibe intre 5 si 64 de caractere");
+		        } else {
+		        	const data = {
+		        		"name":name,
+		        		"phone": phone
+		        	};
+		            $.post('c/sf', { data })
+					.done(function(response){
+						if (response == 'no-data')
+						{
+							alert('A aparut o eroare, anunta un administrator.');
+						}
+						else if (response == 'done')
+						{
+							//va face ceva aici
+							$("input[name=pname]").val('');
+							$("input[name=phone]").val('');
+							alert('Mesajul tau a fost trimis, te vom contacta in curand.')
+						}
+					});
+		        }
+		    }
+		});
+	  </script>
+    <script>
+    	$('.m-fp-menu-button').click(function(){
+    		if (!$(this).data('opened'))
+    		{
+    			$('.fp-icon-menu').fadeOut(150, function(){
+    				$('.fp-icon-menu-close').fadeIn(150, function(){
+    					$('.m-fp-menu-button').data('opened', true);
+    					$('.fp-navbar-list').toggle('slide');
+    				});
+    			});
+    		}
+    		else
+    		{
+    			$('.fp-icon-menu-close').fadeOut(150, function(){
+    				$('.fp-icon-menu').fadeIn(150, function(){
+    					$('.fp-navbar-list').toggle('slide');
+    					$('.m-fp-menu-button').data('opened', false);
+    				});
+    			});
+    		}
+    	});
+    </script>
+</body>
+</html>

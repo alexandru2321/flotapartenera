@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Contact - Flota Partenera {% endblock %}
+{% block description %}Daca doresti sa sti mai multe despre cum poti livra pe Tazz, Foodpanda, Bolt sau Glovo, contacteaza-ne.{% endblock %}
+{% block keywords %}contact, joburi, livrari, tazz, foodpanda, bolt, glovo, asigurari{% endblock %}
+{% block robots %}index, follow{% endblock %}
+{% block googlebot %}index, follow{% endblock %}
+{% block body %}
+    <section class = "fp-hero-section">
+    	<div class = "fp-overlay">
+	    	<div class = "fp-container">
+	    		<div class = "fp-hero-text">
+		    		<h1>Contacteaza-ne</h1>
+		    		<h2>Obtine mai multe detalii despre cum sa livrezi pe <span class = "tazz">Tazz</span>, <span class = "foodpanda">Foodpanda</span>, <span class = "bolt">Bolt Food</span> sau <span class = "glovo">Glovo</span></h2>
+		    		<p>Suntem la un click distanta.</p>
+	    		</div>
+	    		<div class = "fp-hero-form">
+		    		<input type = "text" name = "pname" placeholder = "Numele tau">
+		    		<input type = "tel" id="phone" name = "phone" placeholder = "Numar de telefon">
+		    		<button class = "send-form">Trimite</button>
+	    		</div>
+	    		<div class = "fp-hero-text">
+		    		<p>De asemenea poti comunica cu noi prin e-mail sau telefon:</p>
+		    		<ul>
+	    				<li><a aria-label = "email" href = "mailto:contact@flotapartenera.com">contact@flotapartenera.ro</a></li>
+	    				<li><a aria-label = "phone" href = "tel:0790454647">+40 790-454-647</a></li>
+    				</ul>
+	    		</div>
+	    	</div>
+    	</div>
+    </section>
+    <section class = "fp-section fp-delivery">
+    	<div class = "fp-container">
+    		<div class = "fp-section-text">
+	    		<h2>Livrari cu Flota Partenera</h2>
+    		</div>
+    		<div class = "fp-deliver-with-us">
+    			<a href = "/flota-partenera/livrari-tazz" aria-label = "tazz">
+    				<img alt = "livrari tazz" src = "{{public_url}}/img/livrari/tazz_by_emag_flota_partenera.jpg">
+    			</a>
+    			<a href = "/flota-partenera/livrari-foodpanda" aria-label = "foodpanda">
+    				<img alt = "livrari foodpanda" src = "{{public_url}}/img/livrari/foodpanda_flota_partenera.jpg">
+    			</a>
+    			<a href = "/flota-partenera/livrari-boltfood" aria-label = "bolt">
+    				<img alt = "livrari bolt" src = "{{public_url}}/img/livrari/bolt_food_flota_partenera.jpg">
+    			</a>
+    			<a href = "/flota-partenera/livrari-glovo" aria-label = "glovo">
+    				<img alt = "livrari glovo" src = "{{public_url}}/img/livrari/glovo_flota_partenera.jpg">
+    			</a>
+    		</div>
+    	</div>
+    </section>
+    <section class = "fp-section fp-secondary fp-team">
+    	<div class = "fp-container fp-flex">
+    		<div class = "fp-section-text">
+	    		<h2>Te asteptam in echipa noastra, este simplu sa aplici.</h2>
+	    		<div class = "fp-requirments">
+	    			<span class = "title">Ai nevoie de urmatoarele:</span>
+	    			<span><i class = "fp-icon-check"></i> O bicicleta, masina sau scooter</span>
+	    			<span><i class = "fp-icon-check"></i> Un smartphone</span>
+	    			<span><i class = "fp-icon-check"></i> Varsta minima 18 ani</span>
+	    		</div>
+    		</div>
+    		<h3 class = "fp-section-title-relative">Hai in echipa</h3>
+    	</div>
+    </section>
+    <section class = "fp-section fp-benefits">
+    	<div class = "fp-container fp-flex">
+    		<div class = "fp-section-text">
+    			<img alt = "livrari" src = "{{public_url}}/img/SVG/icon_benefit_hearth.svg">
+	    		<h2>Avantajele in colaborarea cu noi</h2>
+	    		<p>Vei beneficia de o serie de avantaje(bonusuri) precum asigurari private la Regina Maria sau MedLife, card statie de carburant, discount-uri de innot sau fitness, bonusuri pentru colegi noi adusi in echipa, echipament de lucru si altele.</p>
+    		</div>
+    		<div class = "fp-section-text">
+    			<img alt = "livrari" src = "{{public_url}}/img/SVG/icon_benefit_user.svg">
+	    		<h2>Pare avantajos, dar pretentios</h2>
+	    		<p>Apreciem seriozitatea si promptitudinea celor care colaboreaza cu noi. In cazul in care aceste valori nu vor fi respectate, vom alege sa incetam colaborarea</p>
+    		</div>
+    	</div>
+    </section>
+{% endblock %}
