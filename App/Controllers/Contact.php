@@ -34,7 +34,7 @@ class Contact extends \Core\Controller
 
                 //Recipients
                 $mail->setFrom(CONTACT_EMAIL_USERNAME, CONTACT_EMAIL_NAME);
-                $mail->addAddress('lex.udristioiu@gmail.com', 'Mihai');
+                $mail->addAddress(CONTACT_EMAIL_RECEIVE, 'Alexandru');
 
                 //Content
                 $mail->isHTML(true);
